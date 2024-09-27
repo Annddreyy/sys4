@@ -32,7 +32,7 @@ public class Main {
     }
 
     // Умножение с помощью сложения
-    public static int multiplication_addition(int a, int b) {
+    private static int multiplication_addition(int a, int b) {
         int result = 0;
         for (int i = 0; i < Math.abs(b); i++) result += a;
         if (b < 0) result = -result; // Если второе число было отрицательное, то используемый унарный минус
@@ -40,14 +40,14 @@ public class Main {
     }
 
     // Умножение с помощью рекурсии
-    public static int multiplication_recursion(int a, int b) {
+    private static int multiplication_recursion(int a, int b) {
         if (b == 0) return 0;
         else if (b > 0) return a + multiplication_recursion(a, b - 1);
         return -multiplication_recursion(a, -b);
     }
 
     // Умножение с помощью побитовых операций
-    public static int multiplication_bit_operations(int a, int b) {
+    private static int multiplication_bit_operations(int a, int b) {
         int result = 0;
         int k = b; // Сохраняем значение числа b
         if (b < 0) b = -b; // Если b было отрицательным, то делаем его положительным
